@@ -1,0 +1,116 @@
+{
+    "@platforms" : [ "android" ],
+    "id" : "H5B6BC8F0",
+    "name" : "Listen 1",
+    "version" : {
+        "name" : "2.17.2",
+        "code" : 10
+    },
+    "description" : "基于 Listen 1 chrome 扩展制作的 Listen 1 Web App",
+    "icons" : {
+        "72" : "icon.png"
+    },
+    "launch_path" : "listen1.html",
+    "permissions" : {
+        "Events" : {
+            "description" : "应用扩展事件"
+        },
+        "File" : {
+            "description" : "访问本地文件系统"
+        },
+        "Storage" : {
+            "description" : "管理应用本地数据"
+        },
+        "Runtime" : {
+            "description" : "访问运行期环境"
+        },
+        "XMLHttpRequest" : {
+            "description" : "跨域网络访问"
+        },
+        "Webview" : {
+            "description" : "窗口管理"
+        },
+        "NativeUI" : {
+            "description" : "原生UI控件"
+        },
+        "Navigator" : {
+            "description" : "浏览器信息"
+        }
+    },
+    "plus" : {
+        "useragent" : {
+            "value" : "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36"
+        },
+        "splashscreen" : {
+            "autoclose" : true,
+            "waiting" : false
+        },
+        "popGesture" : "close",
+        "runmode" : "liberate",
+        "distribute" : {
+            "google" : {
+                "packagename" : "com.jyuaan.listenone",
+                "permissions" : [ "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>" ],
+                "abiFilters" : [ "arm64-v8a" ],
+                "targetSdkVersion" : 30,
+                "minSdkVersion" : 25,
+                "autoSdkPermissions" : false,
+                "custompermissions" : true,
+                "permissionExternalStorage" : {
+                    "request" : "none"
+                },
+                "permissionPhoneState" : {
+                    "request" : "none"
+                },
+                "hardwareAccelerated" : true
+            },
+            "orientation" : [ "portrait-primary" ],
+            "icons" : {
+                "android" : {
+                    "mdpi" : "unpackage/res/icons/48x48.png",
+                    "ldpi" : "unpackage/res/icons/48x48.png",
+                    "hdpi" : "unpackage/res/icons/72x72.png",
+                    "xhdpi" : "unpackage/res/icons/96x96.png",
+                    "xxhdpi" : "unpackage/res/icons/144x144.png",
+                    "xxxhdpi" : "unpackage/res/icons/192x192.png"
+                }
+            },
+            "splashscreen" : {
+                "android" : {
+                    "mdpi" : "unpackage/res/splash.9.png",
+                    "ldpi" : "unpackage/res/splash.9.png",
+                    "hdpi" : "unpackage/res/splash.9.png",
+                    "xhdpi" : "unpackage/res/splash.9.png",
+                    "xxhdpi" : "unpackage/res/splash.9.png"
+                },
+                "androidStyle" : "default"
+            },
+            "plugins" : {
+                "ad" : {}
+            }
+        }
+    },
+    "screenOrientation" : [ "portrait-primary" ],
+    "unpackage" : [
+        ".git",
+        "css/bootstrap.min.css",
+        "css/cover.css",
+        "css/player.css",
+        "css/reset.css",
+        "images/favicon.ico",
+        "images/loading.gif",
+        "images/logo.png",
+        "images/logo_16.png",
+        "images/logo_48.png",
+        "images/placeholder.png",
+        "images/player_directplay.png",
+        "images/player_large.png",
+        "images/player_small.png",
+        "images/progress_indicator.png",
+        "images/statbar.png",
+        "js/background.js",
+        "js/oauth_callback.js",
+        "README.md",
+        "LICENSE"
+    ]
+}

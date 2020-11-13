@@ -1,0 +1,15 @@
+.navigation .backfront .icon.li-back,
+.navigation .backfront .icon.li-advance,
+.settings-title:nth-child(13),
+.settings-title:nth-child(15),
+.settings-title:nth-child(17),
+.settings-content:nth-child(14),
+.settings-content:nth-child(16),
+.settings-content:nth-child(18) {
+  display: none;
+}
+
+a[open-url*="coolmarket"] {
+  color: #0F9D58;
+  text-decoration: none;
+}
