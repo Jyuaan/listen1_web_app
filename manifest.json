@@ -3,13 +3,10 @@
     "id" : "H5B6BC8F0",
     "name" : "Listen 1",
     "version" : {
-        "name" : "2.17.2",
-        "code" : 10
+        "name" : "2.17.3",
+        "code" : 11
     },
     "description" : "基于 Listen 1 chrome 扩展制作的 Listen 1 Web App",
-    "icons" : {
-        "72" : "icon.png"
-    },
     "launch_path" : "listen1.html",
     "permissions" : {
         "Events" : {
@@ -39,7 +36,7 @@
     },
     "plus" : {
         "useragent" : {
-            "value" : "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36"
+            "value" : "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36"
         },
         "splashscreen" : {
             "autoclose" : true,
@@ -67,8 +64,6 @@
             "orientation" : [ "portrait-primary" ],
             "icons" : {
                 "android" : {
-                    "mdpi" : "unpackage/res/icons/48x48.png",
-                    "ldpi" : "unpackage/res/icons/48x48.png",
                     "hdpi" : "unpackage/res/icons/72x72.png",
                     "xhdpi" : "unpackage/res/icons/96x96.png",
                     "xxhdpi" : "unpackage/res/icons/144x144.png",
@@ -84,15 +79,11 @@
                     "xxhdpi" : "unpackage/res/splash.9.png"
                 },
                 "androidStyle" : "default"
-            },
-            "plugins" : {
-                "ad" : {}
             }
         }
     },
     "screenOrientation" : [ "portrait-primary" ],
     "unpackage" : [
-        ".git",
         "css/bootstrap.min.css",
         "css/cover.css",
         "css/player.css",
@@ -108,7 +99,6 @@
         "images/player_small.png",
         "images/progress_indicator.png",
         "images/statbar.png",
-        "js/background.js",
         "js/oauth_callback.js",
         "README.md",
         "LICENSE"

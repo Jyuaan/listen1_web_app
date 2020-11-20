@@ -1,6 +1,6 @@
-Listen 1 (Web App) V2.17.2
+Listen 1 (Web App) V2.17.3
 ==========
-（最后更新于2020年11月13日）
+（最后更新于2020年11月20日）
 
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
 
@@ -31,6 +31,9 @@ Listen 1 (Web App) V2.17.2
 
 更新日志
 -------
+`2020-11-20`
+* 一些奇奇怪怪的修改。
+
 `2020-11-13`
 * 初版本。基于 Listen 1 (Chrome Extension) V2.17.0。
 

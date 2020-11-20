@@ -129,20 +129,20 @@ function plus_cookieGet(cookie, callback) {
     })
   }
 }
-
+document.write("<script type='text/javascript' src='js/background.js'></script>");
 const referurl = {
-  'api.xiami.com': ['https://www.xiami.com', 'json'],
-  'c.y.qq.com': ['https://y.qq.com/', 'text'],
-  'i.y.qq.com': ['https://y.qq.com/', 'text'],
-  'm.kugou.com': ['http://www.kugou.com/', 'text'],
-  'www.kuwo.cn': ['http://www.kuwo.cn/', 'json'],
-  'music.migu.cn': ['http://music.migu.cn/v3/music/player/audio?from=migu', 'json']
+  'api.xiami.com': 'json',
+  'c.y.qq.com': 'text',
+  'i.y.qq.com': 'text',
+  'm.kugou.com': 'text',
+  'www.kuwo.cn': 'json',
+  'music.migu.cn': 'json'
 }
 const plus_http = (set) => {
   return new Promise((resolve, reject) => {
     let xhr = new plus.net.XMLHttpRequest();
     xhr.onload = () => {
-      if (referurl[set.url.split('/')[2]][1] == 'json') {
+      if (referurl[set.url.split('/')[2]] == 'json') {
         var response = {
           data: xhr.response
         }
@@ -160,7 +160,12 @@ const plus_http = (set) => {
     for (let key in set.headers) {
       xhr.setRequestHeader(key, set.headers[key])
     }
-    xhr.setRequestHeader('referer', referurl[set.url.split('/')[2]][0]);
+    for (let key of hack_referer_header({
+        url: set.url,
+        requestHeaders: []
+      }).requestHeaders) {
+      xhr.setRequestHeader(key.name, key.value)
+    }
     xhr.send();
   })
 }
@@ -369,12 +374,4 @@ function plus_backupMySettings() {
       })
     })
   });
-}
-
-function waibujs() {
-  plus.nativeUI.prompt("确定重启生效，返回不作修改", (e) => {
-    if (e.index == 0) {
-      localStorage.setItem('js', '"' + e.value + '"');
-    }
-  }, "引用外部JavaScript", localStorage.getItem('js') && localStorage.getItem('js').split('"')[1], ["确定"]);
 }
