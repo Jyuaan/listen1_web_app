@@ -32,7 +32,8 @@ Listen 1 (Web App) V2.17.3
 更新日志
 -------
 `2020-11-20`
-* 一些奇奇怪怪的修改。
+* 引入 Chrome Extension 版本的 background.js 文件。
+* 删除分辨率过小的图标。
 
 `2020-11-13`
 * 初版本。基于 Listen 1 (Chrome Extension) V2.17.0。
